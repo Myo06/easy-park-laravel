@@ -1,12 +1,8 @@
 # Test technique SYNAPPS
 
-Le but de l’exercice est de développer une application “serveur” exposant une API REST pour permettre à une application mobile ou un site Web d’afficher la liste des parkings à proximité
+Le but de l’exercice est de développer une application “serveur” exposant une API REST pour permettre à une application mobile ou un site Web d’afficher la liste des parkings à proximité.
 
-Ici on utilisera la source de données suivante disponible à Bordeaux :
-
-http://data.lacub.fr/wfs?key=9Y2RU3FTE8&SERVICE=WFS&VERSION=1.1.0&REQUEST=GetFeature&TYPENAME=ST_PARK_P&SRSNAME=EPSG:4326
-
-L’application doit pouvoir fonctionner dans d’autres villes : l’URL et le format des données parking pourront donc être complètement différents, cependant l’API REST exposée pour l’application mobile ne devra pas évoluer.
+L’application doit pouvoir fonctionner dans toute les villes,  l’API REST exposée pour l’application mobile ne devra pas évoluer.
 
 L’application à développer dans le cadre de l’exercice comporte uniquement la partie serveur (développer l’application mobile ou web est en option).
 
