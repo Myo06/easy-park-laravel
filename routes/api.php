@@ -14,7 +14,3 @@ use App\Http\Controllers\SearchParkingController;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-
-Route::get( '/searchParking/{query}', [SearchParkingController::class, 'browse', 'as' => 'searchParking-browse' ])
-->where('query', '^[a-zA-Z]+$');
-

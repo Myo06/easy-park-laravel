@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\SearchParkingController;
+use App\Http\Controllers\ParkingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,3 +13,5 @@ use App\Http\Controllers\SearchParkingController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get( '/parkings', [ParkingController::class, 'browse']);
