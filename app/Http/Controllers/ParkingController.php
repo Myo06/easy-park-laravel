@@ -3,13 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Constants\GoogleMapsError;
-use App\Exceptions\Handler;
-use App\Http\Requests\ParkingRequest;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 
+// ParkingController.php
 class ParkingController extends Controller
 {
     // === validator
@@ -42,10 +40,12 @@ class ParkingController extends Controller
         // else get the google map api
         $query =  $validator->validate()['query'];
 
+        //@https://github.com/alexpechkarev/google-maps
         $response = \GoogleMaps::load('textsearch')
                 ->setParamByKey('query', 'parking+in+'.$query)
                 ->setParamByKey('type', 'parking')
                 ->get();
+
        $response = json_decode($response);
 
         // === Responses

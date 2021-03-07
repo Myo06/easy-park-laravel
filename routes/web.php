@@ -14,4 +14,5 @@ use App\Http\Controllers\ParkingController;
 |
 */
 
+// get a JSON parking list from the google api
 Route::get( '/parkings', [ParkingController::class, 'browse']);
